@@ -1,0 +1,18 @@
+:host{
+    height:100vh;
+}
+.movie-container{
+    width:80vw;
+    margin:auto;
+    display:flex;
+    height:20px;
+    flex-wrap:wrap;
+     flex-direction:row;
+    /* overflow-x:auto; */
+    /* flex-direction:row;
+    flex-wrap:wrap;
+    overflow-x:auto;
+    height:100vh; */
+
+}
+

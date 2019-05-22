@@ -1,0 +1,41 @@
+.moviecard{
+   max-width:300px;
+   margin:10px;
+
+
+}
+.movie-content{
+    height:50px;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.movie-image{
+    height:400px;
+
+}
+
+
+.movie-action{
+    text-align:right;
+}
+
+.movietitle{
+    height:2rem;
+    max-width:200px;
+    font-size: 1rem;
+    text-overflow:hidden;
+
+}
+
+.moviesubtitle{
+margin-top:1.5rem;
+}
+
+
+
+
+
+
+
+

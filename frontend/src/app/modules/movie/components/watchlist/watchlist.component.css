@@ -1,0 +1,9 @@
+:host{
+    height:50vh;
+}
+.movie-container{
+    margin:auto;
+    width:80vw;
+    display:flex;
+    height:20px;
+}

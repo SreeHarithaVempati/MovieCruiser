@@ -1,0 +1,43 @@
+version: '3.3'
+services:
+  user-app:
+   image: sreeharithavempati/moviecruiser:userVfinal-app
+   container_name: user-app-docker
+   restart: always
+   network_mode: host
+   ports:
+     - 5624:5624
+   expose:
+     - 5624
+   depends_on:
+     - moviesdatabase-mysql
+  movie-app:
+   image: sreeharithavempati/moviecruiser:movieVfinal-app
+   container_name: movie-app-docker
+   restart: always
+   network_mode: host
+   ports:
+     - 5623:5623
+   expose:
+     - 5623
+   depends_on:
+     - moviedatabase-mysql
+
+  moviedatabase-mysql:
+   image: mysql:5.5
+   container_name: mysql-docker
+   network_mode: host
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_DATABASE: moviedatabase
+     MYSQL_USER: fsemovieuser
+     MYSQL_PASSWORD: FsePassword
+  
+  movie-front:
+    image: sreeharithavempati/moviecruiser:angularVfinal-app
+    container_name: movie-front-docker
+    network_mode: host
+    ports:
+      - 4200:4200
